@@ -53,8 +53,36 @@ Think of it as 'grunt-cli'.
 Each docdoc documentation can have its own Generator version. The command line
 Interface looks for and executed the 'local' Generator.
 
-## docdoc-generator
+----------
+
+# docdoc-generator
 
 The docdoc generator helps to turn a markdown and media files living in the
 filessystem into a static website.
 Think of it as a 'single-purpose jekyll + media files' written for Node.js
+
+## Development
+
+### Prerequisites
+- [Node.js + npm](http://http://nodejs.org/)
+- [grunt](http://http://gruntjs.com/) (for Development Helpers)
+
+### Installation
+- run `npm install`
+
+### Development Helpers
+- 'grunt watch:theme'  
+will run the generator if the content of the _theme folder changes
+
+### Theme Development
+
+see [docdoc-theme](https://github.com/preciousforever/docdoc-theme)
+
+If you are working on the theme, you might want to link the constantly changing
+theme directory for the docdoc-theme directory to the example-documentation:  
+`ln -s ../docdoc-theme/theme ./example-documentation/_theme`
+
+and then run 'grunt watch:theme'
+
+## Usage
+- run 'node lib/index.js'

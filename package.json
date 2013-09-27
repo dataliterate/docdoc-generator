@@ -1,0 +1,33 @@
+{
+  "name": "docdoc-generator",
+  "version": "0.0.1",
+  "description": "A static documentation generator - like a single purpose jekyll + media files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/preciousforever/docdoc-generator"
+  },
+  "author": "Michael Schieben <michael@precious-forever.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/preciousforever/docdoc-generator/issues"
+  },
+  "devDependencies": {
+    "grunt-regarde": "~0.1.1",
+    "grunt": "~0.4.1",
+    "grunt-shell": "~0.4.0"
+  },
+  "dependencies": {
+    "js-yaml": "~2.1.0",
+    "github-flavored-markdown": "~1.0.1",
+    "consolidate": "~0.9.1",
+    "handlebars": "~1.0.12",
+    "rimraf": "~2.2.2",
+    "ejs": "~0.8.4",
+    "ncp": "~0.4.2",
+    "step": "0.0.5"
+  }
+}

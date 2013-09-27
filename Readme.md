@@ -77,16 +77,16 @@ supported.
 Example:
 ```
 - [Folder] 01 Grids
--- [Folder] 01.1 Touch_Devices
--- [Folder] 01.2 Desktop
+-- [Folder] 01.1_Touch_Device_Grid-System
+-- [Folder] 01.2 Desktop Grid-System
 --- [Folder] 01.2.1 will-be-ignored
 - [Folder] 02 Typography
 ```
 The above filesystem structure will lead to the following navigation:
 
-- Grids
--- Touch Devices
--- Desktop
+- Grid-System
+    - Touch Devices
+    - Desktop
 - Typography
 
 The hierachy level of the folder `01.2.1 will-be-ignored` is too deep. The
@@ -96,9 +96,9 @@ folder and its content will be ignored.
 The generator will process the file and folder names, when creating the Site.
 
 - _ Underscores are turned to whitespace.  
-`01.1 Touch_Devices` becomes 'Touch Devices' in the navigation
+`01.1_Touch_Device_Grid-System` becomes 'Touch Devices Grid-System' in the navigation
 - Leading Numbers (also dot-separated) will be ignored  
-`01.2 Desktop` becomes 'Desktop'
+`01.2 Desktop Grid-System` becomes 'Desktop Grid-System'
 
 *Use leading number to maintain the order of your content*
 

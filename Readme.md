@@ -77,13 +77,30 @@ supported.
 Example:
 ```
 - [Folder] 01 Grids
--- [Folder] 01.1 Touch Devices
+-- [Folder] 01.1 Touch_Devices
 -- [Folder] 01.2 Desktop
 --- [Folder] 01.2.1 will-be-ignored
 - [Folder] 02 Typography
 ```
-The hierachy level of the folder 01.2.1 is too deep. The folder and its content
-will be ignored.
+The above filesystem structure will lead to the following navigation:
+
+- Grids
+-- Touch Devices
+-- Desktop
+- Typography
+
+The hierachy level of the folder `01.2.1 will-be-ignored` is too deep. The
+folder and its content will be ignored.
+
+##### Names
+The generator will process the file and folder names, when creating the Site.
+
+- _ Underscores are turned to whitespace.  
+`01.1 Touch_Devices` becomes 'Touch Devices' in the navigation
+- Leading Numbers (also dot-separated) will be ignored  
+`01.2 Desktop` becomes 'Desktop'
+
+*Use leading number to maintain the order of your content*
 
 ##### Pages
 All markdown files in one folder will be combined to one page.
@@ -115,12 +132,6 @@ file. Both files must have the same filename, with different extensions:
 
 *Media items that do not have a corresponding markdown file will be ignored*
 
-#### Numbers, Order
-When a file or foldername start with numbers, the numbers will be ignored,
-when creating the Site.
-
-*Use leading number to maintain the order of your content*
-
 #### Ignorance
 `_notpartofthedocumentation.md`  
 Files and Folders starting with an underscore will be ignored and not be part of
@@ -136,9 +147,8 @@ create the Site, using a theme placed in a folder named `_theme`.
 Each folder might contain a configuration file named `_config.yml`.
 
 *Best practice: Do not name your folders, that contain content of the
-documentation _site or  _theme. Never use _config.yml as a filename for files
-that should appear in the
-site*
+documentation _site or  _theme. Never use _config.yml as a filename for content
+that should appear in the site*
 
 ### Usage
 - run 'node lib/index.js'

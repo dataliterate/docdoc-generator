@@ -12,10 +12,17 @@ module.exports = function(grunt) {
       theme: {
         files:['example-documentation/_theme/**/*'],
         tasks:['shell:generate']
-      }
+      },
+      generator: {
+        files:['lib/**/*'],
+        tasks:['shell:generate']
+      },
     },
     shell: {
       generate: {
+        options: {                      // Options
+          stdout: true
+        },
         command: 'node lib/index.js'
       }
     }
@@ -23,6 +30,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', 'build');
 
-  grunt.registerTask('watch:theme', ['regarde']);
+  grunt.registerTask('watch:theme', ['regarde:theme']);
+  grunt.registerTask('watch:generator', ['regarde:generator']);
 
 };

@@ -141,17 +141,20 @@ the Site
 the Site, just prefix the file or foldername with _*
 
 ##### Protected Names
-The Site will be created in a folder named `_site`. The generator will
-create the Site, using a theme placed in a folder named `_theme`.
+The Site will be created in a folder named `_site`. The generator itself is
+located in `_docdoc`. (When each documentation contains its own generator and
+media plugins, it will be easy to maintain different generator versions). 
+The generator will create the Site, using a theme placed in a folder named
+`_docdoc/theme`.
 
 Each folder might contain a configuration file named `_config.yml`.
 
 *Best practice: Do not name your folders, that contain content of the
-documentation _site or  _theme. Never use _config.yml as a filename for content
+documentation _site or  _docdoc. Never use _config.yml as a filename for content
 that should appear in the site*
 
 ### Usage
-- run 'node lib/index.js'
+- run 'node lib/test.js'
 
 ## Development
 

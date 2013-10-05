@@ -1,7 +1,8 @@
 /*global module:false*/
 module.exports = function(docdoc) {
 
-  console.log(docdoc);
+  docdoc.theme.init(require('docdoc-theme'));
+
   docdoc.plugin.init({
     name: 'image',
     serves: ['png'],

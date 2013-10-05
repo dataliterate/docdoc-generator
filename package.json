@@ -22,13 +22,13 @@
   },
   "dependencies": {
     "js-yaml": "~2.1.0",
-    "github-flavored-markdown": "~1.0.1",
     "consolidate": "~0.9.1",
     "handlebars": "~1.0.12",
     "rimraf": "~2.2.2",
     "ejs": "~0.8.4",
     "ncp": "~0.4.2",
     "step": "0.0.5",
-    "slug": "~0.3.3"
+    "slug": "~0.3.3",
+    "marked": "~0.2.9"
   }
 }

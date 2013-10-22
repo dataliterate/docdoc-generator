@@ -25,7 +25,7 @@
     "js-yaml": "~2.1.0",
     "handlebars": "~1.0.12",
     "rimraf": "~2.2.2",
-    "ncp": "~0.4.2",
+    "ncp": "git+ssh://git@github.com:rockitbaby/ncp.git",
     "step": "0.0.5",
     "slug": "~0.3.3",
     "marked": "~0.2.9",
